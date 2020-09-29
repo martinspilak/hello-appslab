@@ -5,17 +5,14 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(multiplyByLength(new int[] {2, 3, 1, 0})));
-        System.out.println(Arrays.toString(multiplyByLength(new int[]{4, 1, 1})));
-        System.out.println(Arrays.toString(multiplyByLength(new int[] {1, 0, 3, 3, 7, 2, 1})));
-        System.out.println(Arrays.toString(multiplyByLength(new int[] {0})));
+        System.out.println(equalSlices(11, 5, 2));
+        System.out.println(equalSlices(11, 5, 3));
+        System.out.println(equalSlices(8, 3, 2));
+        System.out.println(equalSlices(8, 3, 3));
+        System.out.println(equalSlices(24, 12, 2));
     }
-    private static int[] multiplyByLength(int[] array) {
-        int length = array.length;
-        for (var i = 0; i < length; i++)
-        {
-            array[i] *= length;
-        }
-        return array;
-   }
+    private static boolean equalSlices(int totalslices, int people, int slicesforpople) {
+    if(people * slicesforpople <= totalslices) return true;
+    else return false;
+    }
 }
