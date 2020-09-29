@@ -3,12 +3,18 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(totalDistance(0.2, 0.4, 100.0));
-        System.out.println(totalDistance(0.3, 0.2, 25.0));
-        System.out.println(totalDistance(0.1, 0.1, 6.0));
+        System.out.println(Equality(3, 4, 3));
+        System.out.println(Equality(1, 1, 1));
+        System.out.println(Equality(3, 4, 1));
     }
-    private static double totalDistance(double stepHeight, double stepLength, double towerHeight) {
-        var numOfSteps = (towerHeight / stepHeight) * (stepHeight + stepLength);
-        return ((int)numOfSteps);
+    private static double Equality(int a,int b, int c) {
+        if (a == b && b == c ) {
+            return (3);
+        }
+        else if(a == b || a == c || b == c){
+         return(2);}
+        else{
+        }
+        return (0);
 }
 }
