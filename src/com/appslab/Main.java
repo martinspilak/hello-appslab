@@ -3,16 +3,14 @@ import java.util.Arrays;
 
 
 public class Main {
+    }
 
-    public static void main(String[] args) {
-        System.out.println(checkPalindrome("mom"));
-        System.out.println(checkPalindrome("scary"));
-        System.out.println(checkPalindrome("reviver"));
-        System.out.println(checkPalindrome("stressed"));
+    class Student {
+    String name = "John";
+    int studentNumber = 12345;
+        public static void main(String[] args) {
+            Student student1 = new Student();
+            System.out.println(student1.name + ": " + student1.studentNumber);
+        }
+
     }
-    private static boolean checkPalindrome(String str) {
-        StringBuilder sb=new StringBuilder(str);
-        if (sb.reverse().toString().equals(str)) return true;
-        else return false;
-    }
-}
