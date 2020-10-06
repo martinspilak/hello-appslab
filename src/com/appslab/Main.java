@@ -9,7 +9,10 @@ public class Main {
             System.out.println(rps("paper", "scissors"));
             System.out.println(rps("scissors", "scissors"));
             System.out.println(rps("scissors", "paper"));
-
+            System.out.println(rps("scissors", "rock"));
+            System.out.println(rps("rock", "scissors"));
+            System.out.println(rps("paper", "paper"));
+            System.out.println(rps("rock", "rock"));
         }
         private static String rps(String player, String player2) {
         if (player == "rock" && player2 == "scissors" || player == "paper" && player2 == "rock" || player == "scissors" && player2 == "paper")
