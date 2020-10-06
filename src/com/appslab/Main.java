@@ -3,14 +3,25 @@ import java.util.Arrays;
 
 
 public class Main {
-    }
+    public static void main(String[] args) {
+            System.out.println(rps("rock", "paper"));
+            System.out.println(rps("paper", "rock"));
+            System.out.println(rps("paper", "scissors"));
+            System.out.println(rps("scissors", "scissors"));
+            System.out.println(rps("scissors", "paper"));
 
-    class Student {
-    String name = "John";
-    int studentNumber = 12345;
-        public static void main(String[] args) {
-            Student student1 = new Student();
-            System.out.println(student1.name + ": " + student1.studentNumber);
         }
-
+        private static String rps(String player, String player2) {
+        if (player == "rock" && player2 == "scissors" || player == "paper" && player2 == "rock" || player == "scissors" && player2 == "paper")
+            return "Player 1 wins";
+        if (player2 == "rock" && player == "scissors" || player2 == "paper" && player == "rock" || player2 == "scissors" && player == "paper")
+            return "Player 2 wins";
+        return "TIE";
+        }
     }
+
+
+
+
+
+
