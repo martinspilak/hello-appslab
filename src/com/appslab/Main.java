@@ -5,25 +5,21 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println((differenceMaxMin(new int[]{10, 4, 1, 4, -10, -50, 32, 21})));
-        System.out.println((differenceMaxMin(new int[]{44, 32, 86, 19})));
-        System.out.println((differenceMaxMin(new int[]{50, 18, -5, 24, -100, -8, 34, 27})));
-        System.out.println((differenceMaxMin(new int[]{440, -32, 8, 19, 37})));
-        System.out.println((differenceMaxMin(new int[]{7, 2, 4, -15, -12, 60, 29, -21})));
-        System.out.println((differenceMaxMin(new int[]{5, 7, 2, 4, 9})));
+        System.out.println((warOfNumbers(new int[]{2, 8, 7, 5})));
+        System.out.println((warOfNumbers(new int[]{12, 90, 75})));
+        System.out.println((warOfNumbers(new int[]{5, 9, 45, 6, 2, 7, 34, 8, 6, 90, 5, 243})));
+        System.out.println((warOfNumbers(new int[]{7})));
     }
 
-    private static int differenceMaxMin(int[] array) {
-        int max = array[0];
-        int min = array[0];
-        for(int i = 1; i < array.length; i++)
-        {
-            if(array[i] > max)
-                max = array[i];
-            else if(array[i] < min)
-                min = array[i];
+    private static int warOfNumbers(int[] array) {
+        int even = 0, odd = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 == 0)
+                even += array[i];
+            else
+                odd += array[i];
 
         }
-        return max -min;
+        return odd;
     }
 }
