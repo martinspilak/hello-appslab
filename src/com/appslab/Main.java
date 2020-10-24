@@ -3,6 +3,7 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello AppsLab 2020! Haa");
+         Student student1 = new Student("John", 12345);
+         System.out.println(student1.getName() + ": " + student1.getStudentNumber());
     }
 }
